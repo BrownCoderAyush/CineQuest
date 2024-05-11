@@ -12,7 +12,6 @@
 .search-bar{
     flex-basis: 70%;
     height: 100%;
-  
 }
 .search-bar > input{
     width: 80%;

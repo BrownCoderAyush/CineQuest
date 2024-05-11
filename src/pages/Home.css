@@ -1,0 +1,21 @@
+.movie-card-wrapper{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust width for smaller screens */  
+    .movie-wrapper {
+        width: 50%; 
+      
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Full width for even smaller screens */
+    .movie-wrapper {
+        width: 80%;      
+    }
+}
