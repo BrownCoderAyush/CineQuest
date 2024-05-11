@@ -12,6 +12,7 @@
 .search-bar{
     flex-basis: 70%;
     height: 100%;
+    position: relative;
 }
 .search-bar > input{
     width: 80%;
@@ -36,4 +37,20 @@
 
 .navbar-theme{
     flex-basis: 15%;
+}
+
+#result-list{
+    position: absolute; 
+    left: 9.5%;
+    /* display: none; */
+    background-color: whitesmoke;
+    width: 81%;
+    color: black;
+    border: 1px solid var(--dull-blue);
+}
+#result-list div{
+    /* border: 1px solid rgb(113, 101, 101); */
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

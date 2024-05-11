@@ -12,6 +12,21 @@
     justify-content: center;
     background-color: white;
 }
+
+@media screen and (max-width: 768px) {
+    /* Adjust width for smaller screens */  
+    .movie-wrapper {
+        width: 50%; 
+      
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Full width for even smaller screens */
+    .movie-wrapper {
+        width: 80%;      
+    }
+}
 .movie-image{
     text-align: center;
     width: 100%;
