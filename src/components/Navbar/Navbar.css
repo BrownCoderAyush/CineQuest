@@ -42,7 +42,7 @@
 #result-list{
     position: absolute; 
     left: 9.5%;
-    /* display: none; */
+    display: none;
     background-color: whitesmoke;
     width: 81%;
     color: black;
