@@ -47,6 +47,8 @@
     width: 81%;
     color: black;
     border: 1px solid var(--dull-blue);
+    max-height: 400px;
+    overflow-y: scroll;
 }
 #result-list div{
     /* border: 1px solid rgb(113, 101, 101); */
