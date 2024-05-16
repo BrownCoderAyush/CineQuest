@@ -34,7 +34,10 @@
     font-size: 2rem;
     letter-spacing: 15px;
 }
-
+.navbar-title > a{
+    color: white;
+    text-decoration: none;
+}
 .navbar-theme{
     flex-basis: 15%;
 }
@@ -55,4 +58,13 @@
     padding: 10px;
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-search-list{
+    color: black;
+    text-decoration: none;
+}
+.navbar-search-list :hover{
+    background-color: bisque;
+    
 }
