@@ -17,7 +17,8 @@ export default function Home() {
             {/*pagination pages*/}
             <div className="movie-card-wrapper">
                 {movieList.map((movie) => <MovieCard
-                    key={movie.imdbID}
+                    key = {movie.imdbID}
+                    id = {movie.imdbID}
                     {...movie}
                 />
                 )
