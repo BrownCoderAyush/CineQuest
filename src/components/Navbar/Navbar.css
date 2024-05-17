@@ -1,10 +1,9 @@
 .navbar-wrapper{
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-around;
     padding: 1.5rem;
     height: 2.5rem;
     border: 4px solid var(--dull-blue);
-    border-radius: 10px ;
     align-items: center;
     background-color: var(--dull-blue);
     color: white;
@@ -24,7 +23,7 @@
     background-color: var(--light-prime-gray);
     padding-left: 10px;
     font-size: 1rem;
-    color: rgb(255, 255, 255);
+    color: rgb(241, 230, 230);
 }
 .search-bar > input:focus{
     outline: none;
@@ -67,4 +66,9 @@
 .navbar-search-list :hover{
     background-color: bisque;
     
+}
+
+.theme-change-icon{
+    font-size:x-large;
+    cursor: pointer;
 }

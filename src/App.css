@@ -1,11 +1,38 @@
 :root{
-    --prime-blue : #0f79af;
-    --dull-blue : #364f65;
-    --dark-blue : #191e26;
-    --light-prime-gray : #32373e;
+    /* dark mode  */ 
+  --prime-blue: #00a0d6;
+  --dull-blue: #364f65;
+  --dark-blue: #191e26;
+  --card-background: whitesmoke;
+  --font-color: black;
+  --font-color-inverted: white;
+  --light-prime-gray: #32373e;
+
+  /* light mode  */
+  /* --prime-blue: #00a0d6;
+  --dull-blue: #364f65;
+  --dark-blue: #e7e1e1;
+  --light-prime-gray: #e7e1e1;
+  --card-background: #364f65;
+  --font-color: white;
+  --font-color-inverted: black; */
+
+}
+/* data attribute  */
+[theme-attribute = 'Sun']{
+    --prime-blue: #00a0d6;
+    --dull-blue: #364f65;
+    --dark-blue: #e7e1e1;
+    --light-prime-gray: #e7e1e1;
+    --card-background: #364f65;
+    --font-color: white;
+    --font-color-inverted: black;
 }
 body{
-    /* padding: 0px; */
-    /* margin: 1px; */
+    margin: 0;
+    padding: 0;
+}
+
+#app-wrapper{
     background-color: var(--dark-blue);
 }

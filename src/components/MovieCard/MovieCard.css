@@ -10,7 +10,8 @@
     border-radius: 10px;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: var(--card-background);
+    color: var(--font-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -29,7 +30,7 @@
 }
 .movie-image{
     text-align: center;
-    width: 100%;
+    width: 80%;
 }
 .movie-image > img{
     display: inline-block;

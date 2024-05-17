@@ -1,15 +1,26 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import "./Navbar.css"
 import useMovieList from "../../hooks/useMovieList";
 import useDebounce from "../../hooks/useDebounce";
-import axios from "axios";
-import { searchMovieById } from "../../apis/omdb";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link , useNavigate} from "react-router-dom";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import themeContext from "../../contexts/theme-context";
+
+
 function Navbar() {
     const [searchTerm, setSearchTerm] = useState('');
     const [movieList] = useMovieList(searchTerm);
     const navigator = useNavigate();
     const resultListRef = useRef(null);
+    const {theme , setTheme} = useContext(themeContext);
+
+
+    const setThemeHandler = ()=>{
+        setTheme((prevTheme)=>{
+        if(prevTheme=='dark')return 'Sun';
+        return 'dark';
+    })}
 
     return (
         <div className="navbar-wrapper">
@@ -59,8 +70,8 @@ function Navbar() {
                         ))}
                 </div>
             </div>
-            <div className="navbar-theme">
-                Theme
+            <div onClick={setThemeHandler} className="navbar-theme">
+            <FontAwesomeIcon className="theme-change-icon" icon={(theme=='dark')?faMoon:faSun} />
             </div>
         </div>
     )
