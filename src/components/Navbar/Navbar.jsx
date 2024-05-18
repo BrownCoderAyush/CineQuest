@@ -16,11 +16,15 @@ function Navbar() {
     const {theme , setTheme} = useContext(themeContext);
 
 
-    const setThemeHandler = ()=>{
-        setTheme((prevTheme)=>{
-        if(prevTheme=='dark')return 'Sun';
-        return 'dark';
-    })}
+    const setThemeHandler = (theme)=>{
+        if(theme=='dark'){
+            localStorage.setItem('app-theme','Sun');
+            setTheme('Sun');
+        }else{
+            localStorage.setItem('app-theme','dark');
+            setTheme('dark');
+        }
+    }
 
     return (
         <div className="navbar-wrapper">
@@ -70,7 +74,7 @@ function Navbar() {
                         ))}
                 </div>
             </div>
-            <div onClick={setThemeHandler} className="navbar-theme">
+            <div onClick={()=>setThemeHandler(theme)} className="navbar-theme">
             <FontAwesomeIcon className="theme-change-icon" icon={(theme=='dark')?faMoon:faSun} />
             </div>
         </div>

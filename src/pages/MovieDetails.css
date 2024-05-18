@@ -1,6 +1,7 @@
 .movie-details-wrapper{
     display: flex;
     justify-content: space-around   ;
+    height: 100vh;
 }
 
 .movie-details{

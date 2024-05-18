@@ -3,9 +3,9 @@
   --prime-blue: #00a0d6;
   --dull-blue: #364f65;
   --dark-blue: #191e26;
-  --card-background: whitesmoke;
+  --card-background : #e7e1e1;
   --font-color: black;
-  --font-color-inverted: white;
+  --font-color-inverted: rgb(247, 240, 240);
   --light-prime-gray: #32373e;
 
   /* light mode  */
