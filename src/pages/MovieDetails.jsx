@@ -9,18 +9,17 @@ import { Rating } from '@smastrom/react-rating'
 import "./MovieDetails.css";
 import '@smastrom/react-rating/style.css'
 
+
 function MovieDetails() {
-    console.log("here");
+
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
     async function downloadMovieDetails() {
         let searchUrl = searchMovieById(id);
         const response = await axios.get(searchUrl);
-        console.log(Math.floor(response.data.imdbRating));
         setMovie(response.data);
     }
-    // const downloadMovieDetail = useCallback(downloadMovieDetails, [id]);
-        // console.log(movie.imdbRating, "rating");
+
     useEffect(() => {
         downloadMovieDetails();
 
@@ -28,10 +27,11 @@ function MovieDetails() {
             setMovie(null);
         }
     }, [id])
+
     return ((movie == null) ?
         <div>Loading...</div> :
-        <div className="movie-details-wrapper">
-            
+        <div className="movie-details-wrapper">           
+
                 <MovieCard
                 Title={movie.Title}
                 Year={movie.Year}
@@ -47,12 +47,12 @@ function MovieDetails() {
                 <div>
                     Actors : {movie.Actors}
                 </div>
-                <div>
-                    Genre : {movie.Genre.split(',').map((genre)=>{
+                <div className="genre-wrapper">
+                     {movie.Genre.split(',').map((genre)=>{
                         return <span className="genre" key={genre}>{genre}</span>
                     })}
                 </div>
-                <div>
+                <div className="rating-wrapper">
                     <Rating style={{ maxWidth: 250 }} items={10} value={Math.floor(movie.imdbRating)}/>
                 </div>
             </div>

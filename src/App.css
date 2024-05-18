@@ -31,8 +31,11 @@
 body{
     margin: 0;
     padding: 0;
+    height: 100%;
+    /* background-color: var(--dark-blue); */
 }
 
+
 #app-wrapper{
-    background-color: var(--dark-blue);
+    background-color: var(--dark-blue);  
 }
